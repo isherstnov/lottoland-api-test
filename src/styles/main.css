@@ -1,0 +1,158 @@
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #9cc721;
+    color: white;
+    right: 0;
+    top: 0;
+}
+
+header h1 {
+    margin: 0px;
+    font-size: 1.2em;
+    padding-left: 2%;
+    height: 60px;
+}
+
+.content {
+    padding-top: 4.1em;
+}
+
+.results .number,
+.results .euro-number {
+    border: 1px solid #535353;
+    border-radius: 50%;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    display: inline-block;
+    width: 35px;
+    height: 32px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.results .euro-number {
+    border: 1px solid #ca7f26;
+}
+
+.container {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+.eurojackpot-table {
+    margin-top: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table thead th {
+    padding: .5em .75em;
+}
+
+table thead tr {
+    text-align: left;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+table tbody td {
+    padding: .5em .75em;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: none;
+}
+
+table tbody .tier-title {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 0.9em;
+    }
+    .container {
+        width: 98%;
+    }
+    .tier {
+        display: inline-block;
+        width: 15%;
+    }
+    .match {
+        display: inline-block;
+        width: 70%;
+        text-align: right;
+    }
+    .winners {
+        display: inline-block;
+        width: 15%;
+        font-style: italic;
+        color: grey;
+    }
+    .amount {
+        display: inline-block;
+        width: 70%;
+        text-align: right;
+        color: #535353;
+        font-weight: bold;
+    }
+    table {
+        border: 0;
+    }
+    table thead {
+        display: none;
+    }
+    table thead .tier {
+        float: left;
+    }
+    table tbody .tier-title {
+        display: initial;
+    }
+}
+
+@media screen and (max-width: 343px) {
+    header h1 {
+        font-size: 0.9em;
+    }
+    .results h3 {
+        font-size: 0.9em;
+    }
+    .tier {
+        width: 14%;
+    }
+    .match {
+        width: 68%;
+    }
+    .winners {
+        width: 15%;
+    }
+    .amount {
+        width: 68%;
+    }
+    .results .number,
+    .results .euro-number {
+        width: 25px;
+        height: 23px;
+        font-size: 0.9em;
+    }
+}
