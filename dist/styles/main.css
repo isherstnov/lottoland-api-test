@@ -34,7 +34,8 @@ header h1 {
     margin-bottom: 7px;
     display: inline-block;
     width: 35px;
-    height: 32px;
+    height: 35px;
+    line-height: 35px;
     text-align: center;
     font-size: 1.3em;
 }
@@ -152,7 +153,8 @@ table tbody .tier-title {
     .results .number,
     .results .euro-number {
         width: 25px;
-        height: 23px;
+        height: 25px;
+        line-height: 25px;
         font-size: 0.9em;
     }
 }
