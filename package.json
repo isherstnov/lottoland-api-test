@@ -1,0 +1,19 @@
+{
+  "name": "lottoland-api-test",
+  "version": "1.0.0",
+  "description": "Simple Lottoland API test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isherstnov/lottoland-api-test.git"
+  },
+  "author": "Ivan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isherstnov/lottoland-api-test/issues"
+  },
+  "homepage": "https://github.com/isherstnov/lottoland-api-test#readme"
+}
