@@ -12,12 +12,22 @@ function initAjax() {
     document.getElementsByTagName('head')[0].appendChild(script);
 }
 
+/**
+ * Sets the data in the website (date, numbers, table).
+ * 
+ * @param {Object} data
+ */
 function setData(data) {
     setDate(data);
     setNumbers(data);
     setTable(data);
 }
 
+/**
+ * Sets the date on the title of the results.
+ * 
+ * @param {Object} response
+ */
 function setDate(response) {
     let day = response.last.date.day;
     let month = response.last.date.month;
@@ -26,6 +36,11 @@ function setDate(response) {
         EuroJackpot Results for ${day}/${month}/${year}`;
 }
 
+/**
+ * Sets the numbers including the euro-numbers.
+ * 
+ * @param {Object} response
+ */
 function setNumbers(response) {
     let numbers = response.last.numbers;
     let euroNumbers = response.last.euroNumbers;
@@ -37,23 +52,46 @@ function setNumbers(response) {
     addNumbers(euroNumbersToAdd);
 }
 
+/**
+ * Sets the data in the table.
+ * 
+ * @param {Object} response
+ */
 function setTable(response) {
     let tableBodyContent = buildTableBodyContent(response);
     let tableBody = document.getElementsByTagName("tbody")[0];
     tableBody.innerHTML = tableBody.innerHTML + tableBodyContent;
 }
 
+/**
+ * Builds the elements with the numbers.
+ * 
+ * @param {Array.<Number>} numbers - Array of numbers to add to the website
+ * @param {String} className - Class for the HTML element
+ * @returns the numbers in HTML elements with the specific class
+ */
 function buildNumbersElements(numbers, className) {
     let numbersToAdd = ``;
     numbers.forEach(number => numbersToAdd += `<span class="${className}">${number}</span>`);
     return numbersToAdd;
 }
 
+/**
+ * Adds the HTML elements as a String to the results element of the website.
+ * 
+ * @param {String} numbers 
+ */
 function addNumbers(numbers) {
     let div = document.getElementById('results');
     div.innerHTML = div.innerHTML + numbers;
 }
 
+/**
+ * Builds the content of the table.
+ * 
+ * @param {Object} response 
+ * @returns the table content in HTML
+ */
 function buildTableBodyContent(response) {
     let tableBodyContent = ``;
     let oddsArray = Object.keys(response.last.odds).map(key => response.last.odds[key]);
@@ -70,6 +108,14 @@ function buildTableBodyContent(response) {
     return tableBodyContent;
 }
 
+/**
+ * Creates a row with the specific information provided.
+ * 
+ * @param {Number} index 
+ * @param {Number} prize 
+ * @param {Number} winners 
+ * @returns row created
+ */
 function createRowTable(index, prize, winners) {
     let tier = TIERS[index - 1];
     let match = MATCHS[index - 1];

@@ -1,10 +1,6 @@
 # Lottoland API Test
 Simple API test
 
-## Requisites
-* Have GULP installed  
-`npm install gulp -g`
-
 ## Instructions
 1. Install dependencies  
 `npm install`
